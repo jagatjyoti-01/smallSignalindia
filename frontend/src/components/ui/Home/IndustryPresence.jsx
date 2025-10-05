@@ -68,6 +68,9 @@ export default function IndustryPresence() {
           </motion.div>
         ))}
       </div>
+
+
+      
     </section>
   );
 }

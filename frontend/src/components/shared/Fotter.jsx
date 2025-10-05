@@ -9,6 +9,7 @@ import {
   FaTwitter,
   FaPinterestP,
   FaArrowUp,
+  FaInstagram
 } from "react-icons/fa";
 import logo from "../../assets/ssi_logo-withoutbg.png"
 
@@ -35,12 +36,50 @@ export default function Footer() {
       {showScroll && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 bg-[#1dabaa] hover:bg-[#17a09e] text-white p-3 rounded-full shadow-xl transition-all duration-300 animate-bounce z-50"
+          className="fixed bottom-4 right-6 bg-[#1dabaa] hover:bg-[#17a09e] text-white p-3 rounded-full shadow-xl transition-all duration-300 animate-bounce z-50"
         >
           <FaArrowUp className="text-xl" />
         </button>
       )}
+       <div className="fixed bottom-18 right-6 flex flex-col gap-3 z-50">
+        {/* Facebook */}
+        <a
+          href="https://facebook.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-[#1dabaa] hover:bg-[#17a49a] text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
+        >
+          <FaFacebookF size={18} />
+        </a>
 
+         {/* Twitter */}
+        <a
+          href="https://twitter.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-[#1dabaa] hover:bg-[#17a49a] text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
+        >
+          <FaTwitter size={18} />
+        </a>
+
+        {/* Instagram */}
+        <a
+          href="https://instagram.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-[#1dabaa] hover:bg-[#17a49a] text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
+        >
+          <FaInstagram size={18} />
+        </a>
+        <a
+          href="https://instagram.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-[#1dabaa] hover:bg-[#17a49a] text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
+        >
+          <FaWhatsapp size={18} />
+        </a>
+        </div>
       <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
         {/* Company Info */}
         <div>
