@@ -3,7 +3,7 @@ import { useState } from "react";
 import "./App.css";
 import Header from "./components/shared/Header";
 import Footer from "./components/shared/Fotter";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import About from "./pages/About/About";
 import Home from "./pages/Home/Home";
 
@@ -18,15 +18,13 @@ function App() {
 
       <Router>
         <Header />
-       
+
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about-us" element={<About/>} />
+          <Route path="/about-us" element={<About />} />
         </Routes>
         <Footer />
       </Router>
-
-      <Footer />
     </>
   );
 }
