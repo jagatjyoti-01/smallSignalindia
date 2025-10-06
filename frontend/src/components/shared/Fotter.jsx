@@ -193,7 +193,7 @@ export default function Footer() {
         </div>
 
         <p className="text-gray-400">
-          © {new Date().getFullYear()} PsiBorg Technologies. All rights reserved.
+          © {new Date().getFullYear()} small signal india. All rights reserved.
         </p>
       </div>
     </footer>
