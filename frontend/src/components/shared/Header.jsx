@@ -194,7 +194,7 @@ export default function Header() {
       {/* Overlay */}
       {menuOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm z-30"
+          className="fixed inset-0 bg-opacity-30 backdrop-blur-sm z-30"
           onClick={() => setMenuOpen(false)}
         ></div>
       )}
