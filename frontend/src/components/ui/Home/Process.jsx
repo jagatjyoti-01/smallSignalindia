@@ -1,65 +1,66 @@
 import React from "react";
 import { motion } from "framer-motion";
-// No Link import anymore
 import bgimg from "../../../assets/bg-hero-circuits.svg";
 import {
-  FaRecycle,
-  FaUsersCog,
+  FaMicrochip,
+  FaNetworkWired,
+  FaCloud,
   FaShieldAlt,
+  FaCogs,
+  FaRobot,
+  FaChartLine,
+  FaGlobe,
 } from "react-icons/fa";
-import { MdVerified } from "react-icons/md";
-import { GiFactory, GiLeafSwirl } from "react-icons/gi";
-import { BsShieldCheck } from "react-icons/bs";
 
 export default function Process() {
   const infoCards = [
     {
-      icon: <BsShieldCheck className="text-4xl text-[#34B34C]" />,
-      title: "ISO 14001:2015 Certified",
+      icon: <FaMicrochip className="text-4xl text-[#1dabaa]" />,
+      title: "AI-Powered IoT Devices",
       description:
-        "Recognized for maintaining high environmental management standards.",
+        "Integrating artificial intelligence with IoT devices to make smarter, self-learning systems.",
     },
     {
-      icon: <MdVerified className="text-4xl text-[#34B34C]" />,
-      title: "GRS Compliant Facility",
+      icon: <FaNetworkWired className="text-4xl text-[#1dabaa]" />,
+      title: "Seamless Connectivity",
       description:
-        "Certified under Global Recycle Standard (Version 4.0) for responsible recycling.",
+        "Reliable and secure device-to-cloud communication with minimal latency and real-time data flow.",
     },
     {
-      icon: <FaRecycle className="text-4xl text-[#34B34C]" />,
-      title: "End-to-End Waste Handling",
+      icon: <FaCloud className="text-4xl text-[#1dabaa]" />,
+      title: "Cloud-Edge Integration",
       description:
-        "From collection to recycling, we manage the full waste life cycle.",
+        "Hybrid architecture allowing intelligent processing at both the edge and in the cloud.",
     },
     {
-      icon: <GiFactory className="text-4xl text-[#34B34C]" />,
-      title: "Modern Recycling Infrastructure",
+      icon: <FaShieldAlt className="text-4xl text-[#1dabaa]" />,
+      title: "End-to-End Security",
       description:
-        "State-of-the-art equipment for efficient and eco-friendly processing.",
+        "Multi-layer encryption and advanced authentication ensure device and data protection.",
     },
     {
-      icon: <FaUsersCog className="text-4xl text-[#34B34C]" />,
-      title: "Skilled Workforce",
+      icon: <FaRobot className="text-4xl text-[#1dabaa]" />,
+      title: "Smart Automation",
       description:
-        "A dedicated team trained in handling all types of waste safely.",
+        "AI-driven decision-making automates industrial operations for maximum efficiency.",
     },
     {
-      icon: <FaShieldAlt className="text-4xl text-[#34B34C]" />,
-      title: "Safety First",
+      icon: <FaCogs className="text-4xl text-[#1dabaa]" />,
+      title: "Scalable Architecture",
       description:
-        "Strict safety protocols across all operations to protect staff and environment.",
+        "Built to handle thousands of IoT devices seamlessly with flexible and modular design.",
     },
     {
-      icon: <GiLeafSwirl className="text-4xl text-[#34B34C]" />,
-      title: "Eco-Conscious Approach",
+      icon: <FaChartLine className="text-4xl text-[#1dabaa]" />,
+      title: "Predictive Analytics",
       description:
-        "Minimizing environmental impact through sustainable practices.",
+        "Real-time monitoring and predictive maintenance powered by machine learning insights.",
     },
     {
-      icon: <GiLeafSwirl className="text-4xl text-[#34B34C]" />,
-      title: "Carbon Footprint Reduction",
+      icon: <FaGlobe className="text-4xl text-[#1dabaa]" />,
+      title: "Global IoT Deployment",
       description:
-        "Implementing strategies to lower greenhouse gas emissions across operations.",
+        "Deploy and manage connected systems worldwide with 24/7 connectivity and cloud integration.",
     },
   ];
 
@@ -81,9 +82,9 @@ export default function Process() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="text-center text-3xl font-bold text-gray-800 my-8 md:my-12"
+        className="text-center text-3xl md:text-4xl font-bold text-gray-800 my-8 md:my-12"
       >
-        Our Special Highlights
+        Our <span className="text-[#1dabaa]">AIoT Highlights</span>
       </motion.h3>
 
       {/* CARDS */}
@@ -96,33 +97,35 @@ export default function Process() {
             whileHover={{ scale: 1.05 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: i * 0.1 }}
-            className="relative bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center hover:shadow-xl transition-all duration-300 overflow-hidden"
+            className="relative bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-[0_0_25px_rgba(29,171,170,0.25)] transition-all duration-300 overflow-hidden"
           >
-            {/* Background Decorative Circles */}
-            <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-br from-[#34B34C] to-[#1fa437] rounded-full transform -translate-x-1/2 translate-y-1/2"></div>
-            <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-blue-200 to-sky-300 rounded-full transform translate-x-1/2 -translate-y-1/2"></div>
+            {/* Decorative Gradient Circles */}
+            <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-br from-[#1dabaa] to-[#00c3ff] rounded-full transform -translate-x-1/2 translate-y-1/2 opacity-20"></div>
+            <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-blue-200 to-sky-300 rounded-full transform translate-x-1/2 -translate-y-1/2 opacity-30"></div>
 
             {/* Content */}
             <div className="relative z-10 mb-4">{card.icon}</div>
-            <h4 className="relative z-10 text-xl font-semibold text-gray-800 mb-2">
+            <h4 className="relative z-10 text-lg md:text-xl font-semibold text-gray-800 mb-2">
               {card.title}
             </h4>
-            <p className="relative z-10 text-gray-600">{card.description}</p>
+            <p className="relative z-10 text-gray-600 text-sm md:text-base">
+              {card.description}
+            </p>
           </motion.div>
         ))}
       </div>
 
       {/* CTA BUTTON */}
-      <div className="text-center mt-8">
+      <div className="text-center mt-10">
         <motion.button
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: infoCards.length * 0.1 }}
-          className="px-6 py-2 bg-[#34B34C] text-white rounded-full hover:bg-teal-600 transition-colors duration-300 font-semibold"
-          onClick={() => alert("Navigate to Services Page (mock button)") }
+          className="px-8 py-3 bg-[#1dabaa] text-white rounded-full hover:bg-[#189b99] transition-colors duration-300 font-semibold"
+          onClick={() => alert('Navigate to AIoT Solutions (mock button)')}
         >
-          More Details
+          Explore More
         </motion.button>
       </div>
     </section>

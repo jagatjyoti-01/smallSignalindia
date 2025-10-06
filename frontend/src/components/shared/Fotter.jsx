@@ -41,7 +41,7 @@ export default function Footer() {
           <FaArrowUp className="text-xl" />
         </button>
       )}
-       <div className="fixed bottom-18 right-6 flex flex-col gap-3 z-50">
+       <div className="fixed bottom-18 right-6 flex flex-col gap-3 z-1 sm:z-50 ">
         {/* Facebook */}
         <a
           href="https://facebook.com"

@@ -35,13 +35,13 @@ const slides = [
   },
   {
     image: hero7,
-    heading: "Smart Infrastructure",
-    subheading: "Optimizing energy, security, and efficiency",
+    heading: "Industry 4.0 Ready",
+    subheading: "Bringing smart factories to life with AIoT",
   },
   {
     image: hero8,
-    heading: "Smart Infrastructure",
-    subheading: "Optimizing energy, security, and efficiency",
+    heading: "Connected Ecosystems",
+    subheading: "Seamless device-to-device and device-to-cloud communication",
   },
 ];
 
@@ -57,7 +57,7 @@ export default function HeroSlider() {
   }, []);
 
   return (
-    <div className="relative h-[90vh] w-full overflow-hidden">
+    <div className="relative h-[100vh] w-full overflow-hidden">
       {slides.map((slide, index) => (
         <div
           key={index}

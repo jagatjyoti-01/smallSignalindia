@@ -17,7 +17,7 @@ const blogPosts = [
     id: 2,
     title: "Our IoT Success Story: Predictive Maintenance Revolution",
     excerpt:
-      "Learn how our IoT platform helped a client reduce equipment downtime by 40% through AI-powered predictive maintenance.",
+      "Learn how our AI-powered IoT platform helped a client reduce equipment downtime by 40% through predictive maintenance.",
     image:
       "https://images.unsplash.com/photo-1591696205602-2f950c417cb9?auto=format&fit=crop&w=800&q=60",
     date: "Aug 15, 2025",
@@ -27,9 +27,9 @@ const blogPosts = [
     id: 3,
     title: "Top 5 IoT Trends to Watch in 2026",
     excerpt:
-      "From digital twins to edge computing, explore the emerging technologies shaping the future of IoT innovation.",
+      "From digital twins to edge computing, explore the emerging technologies shaping the future of AIoT innovation.",
     image:
-      "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=800&q=60",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgrEOk1xnn9HIT61HU4Er6miFoXeINbtvyuQ&s",
     date: "July 30, 2025",
     author: "Michael Brown",
   },
@@ -50,19 +50,18 @@ export default function BlogSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="text-center mb-12 px-2 sm:px-0"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-3">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-3">
             Latest <span className="text-[#1dabaa]">News & Insights</span>
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Stay updated with the latest developments, trends, and success
-            stories in the world of IoT technology.
+          <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base">
+            Stay updated with the latest developments, trends, and success stories in the world of AIoT technology.
           </p>
         </motion.div>
 
         {/* Blog Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {blogPosts.map((post, index) => (
             <motion.div
               key={post.id}
@@ -73,7 +72,7 @@ export default function BlogSection() {
               transition={{ delay: index * 0.2 }}
               className="group bg-gray-50 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-500 flex flex-col"
             >
-              <div className="overflow-hidden">
+              <div className="overflow-hidden rounded-t-2xl">
                 <img
                   src={post.image}
                   alt={post.title}
@@ -87,7 +86,7 @@ export default function BlogSection() {
                 <h3 className="font-semibold text-xl mb-3 group-hover:text-[#1dabaa] transition-colors">
                   {post.title}
                 </h3>
-                <p className="text-gray-600 flex-grow">{post.excerpt}</p>
+                <p className="text-gray-600 flex-grow text-sm sm:text-base">{post.excerpt}</p>
                 <button className="mt-4 inline-flex items-center text-[#1dabaa] font-medium group-hover:underline transition-all">
                   Read More
                   <FaArrowRight className="ml-2 text-sm group-hover:translate-x-1 transition-transform" />

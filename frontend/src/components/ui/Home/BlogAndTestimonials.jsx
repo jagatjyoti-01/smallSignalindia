@@ -7,39 +7,39 @@ import "swiper/css";
 
 const testimonials = [
   {
-    name: "John Smith",
-    role: "CTO, TechMotive",
+    name: "Ananya Patel",
+    role: "Product Head, SmartGrid AI",
     feedback:
-      "Their IoT platform revolutionized how we monitor our assets. Real-time data and predictive insights helped us reduce downtime by 40%.",
-    avatar: "https://randomuser.me/api/portraits/men/45.jpg",
-  },
-  {
-    name: "Sophia Turner",
-    role: "Operations Head, SmartEdge",
-    feedback:
-      "Amazing service and innovative IoT solutions! The team truly understands industrial needs and delivers on time.",
+      "Their AIoT platform completely transformed our energy monitoring system — reducing operational inefficiency by over 45%. Brilliant innovation and support!",
     avatar: "https://randomuser.me/api/portraits/women/47.jpg",
   },
   {
-    name: "Rajesh Kumar",
-    role: "Plant Manager, NexaWorks",
+    name: "Rohit Verma",
+    role: "Founder, MechSense Robotics",
     feedback:
-      "The integration process was smooth and quick. Now we get actionable insights daily — boosting our efficiency massively.",
-    avatar: "https://randomuser.me/api/portraits/men/52.jpg",
+      "The integration of AI and IoT into our manufacturing process was seamless. Real-time analytics have helped us prevent equipment failures and optimize production.",
+    avatar: "https://randomuser.me/api/portraits/men/46.jpg",
   },
   {
-    name: "Emma Johnson",
-    role: "IoT Project Lead, VoltEdge",
+    name: "Lisa Thompson",
+    role: "Operations Lead, CloudEdge Systems",
     feedback:
-      "A perfect blend of tech expertise and business understanding. Their IoT solutions made our smart systems more reliable.",
-    avatar: "https://randomuser.me/api/portraits/women/49.jpg",
+      "Incredible team with deep expertise in IoT automation. Their data-driven insights helped us reduce machine downtime and improve scalability.",
+    avatar: "https://randomuser.me/api/portraits/women/45.jpg",
   },
   {
-    name: "Michael Brown",
-    role: "Automation Engineer, MechaWorks",
+    name: "Karan Sharma",
+    role: "CTO, IntelliConnect",
     feedback:
-      "Seamless connectivity and excellent support. We improved process efficiency by 35% within months of deployment.",
-    avatar: "https://randomuser.me/api/portraits/men/51.jpg",
+      "They developed a robust IoT ecosystem for our connected devices. From secure cloud integration to AI analytics — everything worked flawlessly.",
+    avatar: "https://randomuser.me/api/portraits/men/49.jpg",
+  },
+  {
+    name: "Emily Davis",
+    role: "Project Manager, GreenAutomate",
+    feedback:
+      "A visionary company that understands sustainability and smart tech. Their IoT-driven insights made our factory greener and more efficient.",
+    avatar: "https://randomuser.me/api/portraits/women/50.jpg",
   },
 ];
 
@@ -52,31 +52,32 @@ export default function TestimonialsCarousel() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section className="bg-gray-50 py-16 overflow-hidden relative">
-      {/* Keyframes for animated border */}
+    <section className="bg-gradient-to-b from-white to-[#f8fdfc] py-16 md:py-20 mx-4 md:mx-0 overflow-hidden relative">
+      {/* Animated Gradient Border Style */}
       <style>
         {`
-        @keyframes gradientMove {
-          0% { background-position: 0% 50%; }
-          100% { background-position: 200% 50%; }
-        }
-        .animated-border {
-          border-radius: 1rem;
-          padding: 3px;
-          background: linear-gradient(90deg, #1dabaa, #00c3ff, #1dabaa);
-          background-size: 200% 200%;
-          animation: gradientMove 4s linear infinite;
-        }
-      `}
+          @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 200% 50%; }
+          }
+          .animated-border {
+            border-radius: 1rem;
+            padding: 3px;
+            background: linear-gradient(90deg, #1dabaa, #00c3ff, #1dabaa);
+            background-size: 200% 200%;
+            animation: gradientMove 4s linear infinite;
+          }
+        `}
       </style>
 
+      {/* Section Header */}
       <div className="text-center mb-12 px-4">
         <motion.h2
           variants={fadeIn}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="text-3xl md:text-4xl font-bold mb-3"
+          className="text-3xl md:text-4xl font-bold mb-3 text-gray-800"
         >
           What Our <span className="text-[#1dabaa]">Clients Say</span>
         </motion.h2>
@@ -85,12 +86,13 @@ export default function TestimonialsCarousel() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="text-gray-600 max-w-2xl mx-auto"
+          className="text-gray-600 max-w-2xl mx-auto text-sm md:text-base"
         >
-          Trusted by innovators and industry leaders worldwide.
+          Empowering industries worldwide with secure, scalable, and AI-powered IoT innovation.
         </motion.p>
       </div>
 
+      {/* Swiper Carousel */}
       <Swiper
         modules={[Autoplay]}
         loop={true}
@@ -98,7 +100,7 @@ export default function TestimonialsCarousel() {
         spaceBetween={24}
         slidesPerView={1}
         autoplay={{
-          delay: 3000,
+          delay: 3500,
           disableOnInteraction: false,
         }}
         onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
@@ -123,11 +125,11 @@ export default function TestimonialsCarousel() {
                 <div
                   className={`h-full flex transition-all duration-500 ${
                     isActive ? "animated-border" : "border border-transparent"
-                  } hover:animated-border`}
+                  } hover:scale-[1.02]`}
                 >
-                  <div className="bg-white rounded-[0.9rem] p-6 flex flex-col justify-between w-full text-center shadow-lg h-full">
+                  <div className="bg-white rounded-[0.9rem] p-6 flex flex-col justify-between w-full text-center shadow-md h-full">
                     <FaQuoteLeft className="text-[#1dabaa] text-2xl mx-auto mb-3" />
-                    <p className="text-gray-700 italic mb-6 flex-grow">
+                    <p className="text-gray-700 italic mb-6 flex-grow text-sm md:text-base">
                       "{t.feedback}"
                     </p>
                     <div className="flex flex-col items-center">
@@ -136,7 +138,9 @@ export default function TestimonialsCarousel() {
                         alt={t.name}
                         className="w-14 h-14 rounded-full mb-3 object-cover"
                       />
-                      <p className="font-semibold text-gray-800">{t.name}</p>
+                      <p className="font-semibold text-gray-800 text-base">
+                        {t.name}
+                      </p>
                       <p className="text-sm text-gray-500">{t.role}</p>
                     </div>
                   </div>
